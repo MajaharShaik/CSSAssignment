@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grid Practise</title>
+        <style>
+            .gridContainer {
+                background-color:black;
+                height: 700px;
+                display: grid;
+                gap: 10px 10px;
+                /*grid-template-columns: 133px 133px 133px 133px;
+                grid-template-rows: 133px 133px 133px;*/
+                /*grid-template-columns: repeat(3,1fr);*/
+                /*grid-template-rows: repeat(3,1fr);*/
+                grid-template-columns: 300px 1fr 1fr;
+                grid-template-rows: 50px 1fr 50px;
+                /*justify-content: center;*/
+                /*align-items: center;*/
+                /*place-items: center;*/ /*act combination of justify-content and align-items*/
+            }
+            .gridItem{
+                background-color:aqua;
+                /*height: 100px;
+                width: 100px;*/
+                /*justify-self: center;*/
+            }
+            .item1{
+                /*grid-column-start: 1;
+                grid-column-end: 4;*/
+                /*grid-row-start: 1;
+                grid-row-end: 3;*/
+                grid-column: 1 /span 4;
+            }
+            .footer{
+                grid-column-start: 1;
+                grid-column-end: 4;
+            }
+            .body{
+                grid-column-start: 2;
+                grid-column-end: 4;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="gridContainer">
+            <div class="gridItem item1">This is Header</div>
+            <div class="gridItem menu">2</div>
+            <div class="gridItem body">3</div>
+            <div class="gridItem footer">These is Footer</div>
+        </div>
+    </body>
+</html>
